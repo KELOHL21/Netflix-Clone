@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Main/Home page of Netflix Clone" />
+    <!-- css -->
+    <link rel="stylesheet" href="/Everything/Css/netflix.css" />
+    <link
+      rel="icon"
+      href="./Everything/Images/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- scripts -->
+    <script src="https://unpkg.com/vue@3" defer></script>
+    <script
+      src="https://kit.fontawesome.com/e4ad388285.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="./Everything/Javascript/Main.js" type="module"></script>
+    <title>Netflix - Home</title>
+  </head>
+  <body id="app">
+    <header id="myHeader">
+      <a href="#" class="netflix-logo"
+        ><img src="/Everything/Images/netflix.png" alt="Netflix logo"
+      /></a>
+      <ul class="navigation-list">
+        <li>Home</li>
+        <li>Tv Shows</li>
+        <li>Movies</li>
+        <li>Latest</li>
+        <li><a href="./Watchlist.html">My List</a></li>
+      </ul>
+      <div class="search">
+        <input type="search" placeholder="Titles, people, genres" id="search" />
+        <i class="fa fa-search"></i>
+      </div>
+    </header>
+
+    <main id="mainContent">
+      <section class="banner" v-for="movie in comingSoonList.slice(0, 1)">
+        <div class="content">
+          <h1 class="movieName">{{movie.movieName}}</h1>
+          <img :src="movie.poster" class="movie_Poster" :alt="movie.name" />
+          <p>{{ movie.description }}</p>
+        </div>
+        <div class="banner_buttons">
+          <button class="buttonplay">
+            <a :href="movie.trailer" target="_blank"
+              ><i class="fa fa-play"></i> Play</a
+            >
+          </button>
+          <button class="buttoninfo" id="myBtn">
+            <i class="fa fa-plus"></i
+            ><a :href="movie.description"> More Info</a>
+          </button>
+        </div>
+      </section>
+
+      <section id="main_content-grid">
+        <div class="container-heading">Action</div>
+        <div class="container">
+          <div
+            class="box_hover_display"
+            v-for="(movie, index) in actionList.slice(0, 8)"
+            :id="movie.id"
+            :class="movie.movieName"
+            :alt="movie.movieName"
+          >
+            <img class="all_img" :src="movie.poster" />
+            <button
+              type="button"
+              class="add_button"
+              @click="addtoWatchList(actionList[index])"
+              href="./Watchlist.html"
+            >
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </div>
+        <div class="container-heading">Comedy</div>
+        <div class="container">
+          <div
+            class="box_hover_display"
+            v-for="(movie, index) in comedyList.slice(0, 8)"
+            :id="movie.id"
+            :class="movie.movieName"
+            :alt="movie.movieName"
+          >
+            <img class="all_img" :src="movie.poster" />
+            <button
+              type="button"
+              class="add_button"
+              @click="addtoWatchList(comedyList[index])"
+            >
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </div>
+        <div class="container-heading">Animation</div>
+        <div class="container">
+          <div
+            class="box_hover_display"
+            v-for="(movie, index) in animationList.slice(0, 8)"
+            :id="movie.id"
+            :class="movie.movieName"
+            :alt="movie.movieName"
+          >
+            <img class="all_img" :src="movie.poster" />
+            <button
+              type="button"
+              class="add_button"
+              @click="addtoWatchList(animationList[index])"
+            >
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </div>
+        <div class="container-heading">Horror</div>
+        <div class="container">
+          <div
+            class="box_hover_display"
+            v-for="(movie, index) in horrorList.slice(0, 8)"
+            :id="movie.id"
+            :class="movie.movieName"
+            :alt="movie.movieName"
+          >
+            <img class="all_img" :src="movie.poster" />
+            <button
+              type="button"
+              class="add_button"
+              @click="addtoWatchList(horrorList[index])"
+            >
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <footer id="myFooter">
+    <ul class="footer_content">
+      <li class="footer-grid-item">Audio and Subtitles</li>
+      <li class="footer-grid-item">Audio Description</li>
+      <li class="footer-grid-item">Help Centre</li>
+      <li class="footer-grid-item">Media Centre</li>
+      <li class="footer-grid-item">Terms of Use</li>
+    </ul>
+    <ul class="footer_content">
+      <li class="footer-grid-item">Investor Relations</li>
+      <li class="footer-grid-item">Privacy</li>
+      <li class="footer-grid-item">Legal Notices</li>
+      <li class="footer-grid-item">Cookie Preferences</li>
+      <li class="footer-grid-item">Corporate Information</li>
+    </ul>
+  </footer>
+</html>
