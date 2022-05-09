@@ -1,63 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix-Watchlist</title>
-        <!-- css -->
-        <link rel="stylesheet" href="/Everything/Css/netflix.css" />
-        <link rel="icon" href="./Everything/Images/favicon.ico" type="image/x-icon" />
-        <!-- scripts -->
-        <script src="https://unpkg.com/vue@3" defer></script>
-        <script src="https://kit.fontawesome.com/e4ad388285.js" crossorigin="anonymous" defer></script>
-        <script src="./Everything/Javascript/WatchList.js" type="module"></script>
-</head>
-<body>
-    <div id="myApp">
-        <header id="myHeader">
-            <a href="#" class="netflix-logo"><img src="/Everything/Images/netflix.png" alt="Netflix logo"/></a>
-            <ul class="navigation-list">
-              <li><a href="./index.html">Home</a></li>
-              <li>Tv Shows</li>
-              <li>Movies</li>
-              <li>Latest</li>
-            </ul>
-            <div class="search">
-              <input type="search" placeholder="Titles, people, genres" id="search"/>
-              <i class="fa fa-search"></i>
-            </div>
-            </header>
-    
-            <h1>My WatchList</h1>
-      
-      <main id="mainContent">
-        <section id="main_content-grid">
-          <div class="container-heading">My WatchList:</div>
-            <div class="container">
-            <div class="box_hover_display" v-for="movie in watchListArray">
-              <img class="all_img" :src="movie.poster" />
-              <button type="button" class="hover-button" @click="removeMovieFromWatchList(index)"><i class="fa fa-minus"></i></button>
-            </div>
+    <!-- css -->
+    <link rel="stylesheet" href="/Everything/Css/netflix.css" />
+    <link
+      rel="icon"
+      href="./Everything/Images/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- scripts -->
+    <script src="https://unpkg.com/vue@3" defer></script>
+    <script
+      src="https://kit.fontawesome.com/e4ad388285.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="./Everything/Javascript/WatchList.js" type="module"></script>
+  </head>
+
+  <body id="myApp">
+    <header id="myHeader">
+      <a href="#" class="netflix-logo"
+        ><img src="/Everything/Images/netflix.png" alt="Netflix logo"
+      /></a>
+      <ul class="navigation-list">
+        <li><a href="./index.html">Home</a></li>
+        <li>Tv Shows</li>
+        <li>Movies</li>
+        <li>Latest</li>
+      </ul>
+      <div class="search">
+        <input type="search" placeholder="Titles, people, genres" id="search" />
+        <i class="fa fa-search"></i>
+      </div>
+    </header>
+    <main id="mainContent">
+      <section id="main_content-grid">
+        <div class="container-heading">My WatchList:</div>
+        <div class="container">
+          <div class="box_hover_display" v-for="movie in watchListArray">
+            <img class="all_img" :src="movie.poster" />
+            <button
+              type="button"
+              class="hover-button"
+              @click="removeMovieFromWatchList(index)"
+            >
+              <i class="fa fa-minus"></i>
+            </button>
           </div>
-        </section>
-      
-        <footer id="myFooter">
-        <ul class="footer_content">
-          <li class="footer-grid-item">Audio and Subtitles</li>
-          <li class="footer-grid-item">Audio Description</li>
-          <li class="footer-grid-item">Help Centre</li>
-          <li class="footer-grid-item">Media Centre</li>
-          <li class="footer-grid-item">Terms of Use</li>
-          </ul>
-          <ul class="footer_content">
-          <li class="footer-grid-item">Investor Relations</li>
-          <li class="footer-grid-item">Privacy</li>
-          <li class="footer-grid-item">Legal Notices</li>
-          <li class="footer-grid-item">Cookie Preferences</li>
-          <li class="footer-grid-item">Corporate Information</li>
-        </ul>
-        </footer>
-    </div>
-</body>
+        </div>
+      </section>
+    </main>
+  </body>
+  <footer id="myFooter">
+    <ul class="footer_content">
+      <li class="footer-grid-item">Audio and Subtitles</li>
+      <li class="footer-grid-item">Audio Description</li>
+      <li class="footer-grid-item">Help Centre</li>
+      <li class="footer-grid-item">Media Centre</li>
+      <li class="footer-grid-item">Terms of Use</li>
+    </ul>
+    <ul class="footer_content">
+      <li class="footer-grid-item">Investor Relations</li>
+      <li class="footer-grid-item">Privacy</li>
+      <li class="footer-grid-item">Legal Notices</li>
+      <li class="footer-grid-item">Cookie Preferences</li>
+      <li class="footer-grid-item">Corporate Information</li>
+    </ul>
+  </footer>
 </html>
