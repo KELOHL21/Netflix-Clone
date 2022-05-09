@@ -20,7 +20,8 @@ const Component = {
             localStorage.setItem(watchlist_Key, JSON.stringify(this.watchListArray));
           },
     },
-    //Change
+    
+    //Mounting list
     mounted() {
       if (!localStorage.getItem(watchlist_Key)) {
         let newArray = [];
