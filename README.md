@@ -16,4 +16,5 @@ This app was created with the help of Vue and has similar styling and element fr
 <li>Finalizing Styling</li>
 <li>New Banner and Modal</li>
 <li>Playing trailers</li>
+<li>Responsiveness</li>
 </ul>
