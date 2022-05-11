@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Main/Home page of Netflix Clone" />
     <!-- css -->
-    <link rel="stylesheet" href="/Everything/Css/netflix.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <link
       rel="icon"
       href="./Everything/Images/favicon.ico"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="/Everything/Css/netflix.css" />
+
     <title>Netflix - Home</title>
   </head>
 
@@ -39,7 +46,30 @@
       </header>
 
       <main id="mainContent">
-        <section class="banner" v-for="movie in comingSoonList.slice(0, 1)">
+
+        <section class="banner" v-for="movie in comingSoonList.slice(0,1)" >
+
+        <div class="details">
+          <h1>{{movie.movieName}}</h1>
+
+          <div class="info">
+           <p>{{movie.duration}}</p>
+           <p>{{movie.availDate}}</p>
+           <p>{{movie.genre}}</p>
+          </div>
+          <p>{{movie.description}}</p>
+
+        </div>
+
+        <div id="movie_poster">
+
+          <img :src="movie.poster" class="banner_img">
+
+        </div>
+        </section>
+
+
+        <!--<section class="banner" v-for="movie in comingSoonList.slice(0, 1)">
           <div class="content">
             <h1 class="movieName">{{movie.movieName}}</h1>
             <img :src="movie.poster" class="movie_Poster" :alt="movie.name" />
@@ -56,7 +86,7 @@
               ><a :href="movie.description"> More Info</a>
             </button>
           </div>
-        </section>
+        </section>-->
 
         <section id="main_content-grid">
           <div class="container-heading">Action</div>
@@ -68,8 +98,7 @@
               :class="movie.movieName"
               :alt="movie.movieName"
             >
-              <img class="all_img" :src="movie.poster" />
-              <button
+            <button
                 type="button"
                 class="add_button"
                 @click="addtoWatchList(actionList[index])"
@@ -77,6 +106,9 @@
               >
                 <i class="fa fa-plus"></i>
               </button>
+              <img class="all_img" :src="movie.poster" />
+              <p class="movie_name">{{movie.movieName}}</p>
+              
             </div>
           </div>
           <div class="container-heading">Comedy</div>
@@ -88,14 +120,16 @@
               :class="movie.movieName"
               :alt="movie.movieName"
             >
-              <img class="all_img" :src="movie.poster" />
-              <button
+            <button
                 type="button"
                 class="add_button"
                 @click="addtoWatchList(comedyList[index])"
               >
                 <i class="fa fa-plus"></i>
               </button>
+              <img class="all_img" :src="movie.poster" />
+              <p class="movie_name">{{movie.movieName}}</p>
+              
             </div>
           </div>
           <div class="container-heading">Animation</div>
@@ -107,14 +141,16 @@
               :class="movie.movieName"
               :alt="movie.movieName"
             >
-              <img class="all_img" :src="movie.poster" />
-              <button
+            <button
                 type="button"
                 class="add_button"
                 @click="addtoWatchList(animationList[index])"
               >
                 <i class="fa fa-plus"></i>
               </button>
+              <img class="all_img" :src="movie.poster" />
+              <p class="movie_name">{{movie.movieName}}</p>
+              
             </div>
           </div>
           <div class="container-heading">Horror</div>
@@ -126,14 +162,18 @@
               :class="movie.movieName"
               :alt="movie.movieName"
             >
-              <img class="all_img" :src="movie.poster" />
-              <button
+
+            <button
                 type="button"
                 class="add_button"
                 @click="addtoWatchList(horrorList[index])"
               >
                 <i class="fa fa-plus"></i>
               </button>
+
+              <img class="all_img" :src="movie.poster" />
+              <p class="movie_name">{{movie.movieName}}</p>
+              
             </div>
           </div>
         </section>
@@ -147,6 +187,11 @@
       defer
     ></script>
     <script src="./Everything/Javascript/Main.js" type="module"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
   </body>
   <footer id="myFooter">
     <ul class="footer_content">
