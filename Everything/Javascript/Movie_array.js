@@ -7,17 +7,6 @@ export let movieArray = [
 
     //Coming Soon
     new movie(
-        "_FS_2022",
-        "Firestarter",
-        "New",
-        "A young girl tries to understand how she mysteriously gained the power to set things on fire with her mind.",
-        true,
-        "94 min",
-        "13-05-2022",
-        "/Everything/Images/Coming Soon Movies/Firestarter.jpg",
-        "https://www.imdb.com/video/vi51299097/?playlistId=tt1798632?ref_=ext_shr_lnk",
-    ),
-    new movie(
         "_LY_2022",
         "Lightyear",
         "New",
@@ -27,6 +16,17 @@ export let movieArray = [
         "17-06-2022",
         "/Everything/Images/Coming Soon Movies/Lightyear.jpg",
         "https://www.imdb.com/video/vi1034797593/?playlistId=tt10298810?ref_=ext_shr_lnk",
+    ),
+    new movie(
+        "_N_2022",
+        "Nope",
+        "New",
+        "The residents of a lonely gulch in inland California bear witness to an uncanny and chilling discovery.",
+        true,
+        "Unknown",
+        "22-07-2022",
+        "/Everything/Images/Coming Soon Movies/Nope.jpeg",
+        "https://www.imdb.com/video/vi3950166809/?playlistId=tt10954984?ref_=ext_shr_lnk",
     ),
     new movie(
         "_TBP_2022",
@@ -40,6 +40,17 @@ export let movieArray = [
         "https://www.imdb.com/video/vi3700671001/?playlistId=tt7144666?ref_=ext_shr_lnk"
     ),
     new movie(
+        "_FS_2022",
+        "Firestarter",
+        "New",
+        "A young girl tries to understand how she mysteriously gained the power to set things on fire with her mind.",
+        true,
+        "94 min",
+        "13-05-2022",
+        "/Everything/Images/Coming Soon Movies/Firestarter.jpg",
+        "https://www.imdb.com/video/vi51299097/?playlistId=tt1798632?ref_=ext_shr_lnk",
+    ),
+    new movie(
         "_M:TRG_2022",
         "Minions: The Rise of Gru",
         "New",
@@ -50,17 +61,7 @@ export let movieArray = [
         "/Everything/Images/Coming Soon Movies/Minion rise of gru.jpg",
         "https://www.imdb.com/video/vi1941160473/?playlistId=tt5113044?ref_=ext_shr_lnk",
     ),
-    new movie(
-        "_N_2022",
-        "Nope",
-        "New",
-        "The residents of a lonely gulch in inland California bear witness to an uncanny and chilling discovery.",
-        true,
-        "Unknown",
-        "22-07-2022",
-        "/Everything/Images/Coming Soon Movies/Nope.jpeg",
-        "https://www.imdb.com/video/vi3950166809/?playlistId=tt10954984?ref_=ext_shr_lnk",
-    ),
+    
 
     //Comedy
     new movie(
