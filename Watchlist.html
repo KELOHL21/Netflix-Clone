@@ -38,12 +38,12 @@
       <main id="mainContent">
         <section id="main_content-grid">
           <div class="watchlist-heading">My WatchList:</div>
-          <div class="container">
-            <div class="box_hover_display" v-for="movie in watchListArray">
+          <div class="watchlist_container">
+            <div class="box_hover_display" v-for="(movie,index) in watchListArray">
               <img class="all_img" :src="movie.poster" />
               <button
                 type="button"
-                class="hover-button"
+                class="delete_button"
                 @click="removeMovieFromWatchList(index)"
               >
                 <i class="fa fa-minus"></i>
