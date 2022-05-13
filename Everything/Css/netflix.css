@@ -80,13 +80,27 @@ header .netflix-logo img {
 }
 
 /*Banner*/
-.banner {
-  width: 100%;
+.banner{
+  flex: 1 1 0%;
+  width: max-content;
   text-align: center;
   display: flex;
   margin-top: 65px;
-  background-color: rgb(15, 15, 15);
+  background-color: rgb(228, 26, 26);
   margin-bottom: 5px;
+}
+
+@media screen {
+  .banner{
+
+  }
+}
+
+@media screen and (min-width:1159px){
+.banner {
+  flex: 1 1 0%;
+  width: 100%;
+}
 }
 
 .banner_img{
@@ -114,27 +128,24 @@ header .netflix-logo img {
   margin-top: 50px;
 }
 
-p{
-  margin: auto;
-  margin-top: 10px;
-  padding-top: 15px;
-  text-align: center;
-  font-size: 25px;
-  width:80%;
-}
-
 .movie_detail{
-  margin-left: 5px;
   text-align: center;
-  border: 1px red solid;
+  margin: auto;
+  border: 1px rgba(255, 0, 0, 0.322) solid;
   padding: 5px;
   font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .movieName{
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-top: 50px;
   text-align: center;
+}
+
+.description{
+  margin-top: 5rem;
 }
 
 /* Banner Buttons
@@ -153,7 +164,6 @@ p{
     cursor: pointer;
     background-color: aqua;
   }
-
 .banner_buttons:active {
   border: 2px solid white;
 }
@@ -166,18 +176,15 @@ p{
   height: 4vw;
   background-color: white;
 }
-
 .buttonplay:hover {
   filter: opacity(70%);
 }
-
 .buttoninfo {
   width: 14vw;
   height: 4vw;
   background-color: rgba(109, 109, 110, 0.7);
   color: white;
 }
-
 .buttoninfo:hover {
   filter: opacity(50%);
 }*/
@@ -193,7 +200,7 @@ p{
   position: relative;
   display: flex;
   padding: 0%;
-  margin-bottom: -30px;
+  margin-bottom: 20px;
 }
 
 .box_hover_display {
@@ -269,4 +276,3 @@ p{
   border-radius: 50%;
   font-size: 0.5rem;
 }
-
