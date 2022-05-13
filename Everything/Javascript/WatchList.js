@@ -13,12 +13,11 @@ const Component = {
       };
     },
     methods:{
-
-        removeFromWatchList(index) {
-            this.watchListArray = JSON.parse(localStorage.getItem(watchlist_Key));
-            this.watchListArray.splice(index, 0);
-            localStorage.setItem(watchlist_Key, JSON.stringify(this.watchListArray));
-          },
+      removeFromWatchList(index) {
+        this.watchListArray = JSON.parse(localStorage.getItem(watchlist_Key));
+        this.watchListArray.splice(index, 0);
+        localStorage.setItem(watchlist_Key, JSON.stringify(this.watchListArray));
+      },
     },
     
     //Mounting list
@@ -36,3 +35,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const app = createApp(Component);
   app.mount("#myApp");
 })
+
+  /*removeFromWatchList(index) {
+            this.watchListArray = JSON.parse(localStorage.getItem(watchlist_Key));
+            this.watchListArray.splice(index, 0);
+            localStorage.setItem(watchlist_Key, JSON.stringify(this.watchListArray));
+          },*/
