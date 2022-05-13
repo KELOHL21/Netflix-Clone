@@ -12,7 +12,7 @@ export let movieArray = [
         "New",
         "The story of Buzz Lightyear and his adventures to infinity and beyond.",
         true,
-        "Unknown",
+        "1h 40m",
         "17-06-2022",
         "/Everything/Images/Coming Soon Movies/Lightyear.jpg",
         "https://www.imdb.com/video/vi1034797593/?playlistId=tt10298810?ref_=ext_shr_lnk",
