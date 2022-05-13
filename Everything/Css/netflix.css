@@ -90,12 +90,15 @@ header .netflix-logo img {
 }
 
 .banner_img{
-  width:55vw;
-  height: 45vh;
+  
   margin-top: 45px;
   padding-left: 5px;
   border-radius: 15px;
   opacity: 80%;
+  float: right;
+  width: 60vw;
+  height: 50vh;
+  background-size: cover;
 }
 
 .info{
@@ -113,15 +116,19 @@ header .netflix-logo img {
 
 p{
   margin: auto;
+  margin-top: 10px;
+  padding-top: 15px;
   text-align: center;
-  margin-bottom: 50px;
   font-size: 25px;
-  width:60%;
+  width:80%;
 }
 
-.movie_Poster {
-  width: 100%;
-  margin: 10px;
+.movie_detail{
+  margin-left: 5px;
+  text-align: center;
+  border: 1px red solid;
+  padding: 5px;
+  font-size: 15px;
 }
 
 .movieName{
@@ -185,7 +192,7 @@ p{
 .container {
   position: relative;
   display: flex;
-  margin-left: -20px;
+  padding: 0%;
   margin-bottom: -30px;
 }
 
@@ -226,7 +233,7 @@ p{
   height: 150px;
   background-size: cover;
   border-radius: 25px;
-  padding-left: 5px;
+  padding-left: 1.5px;
 }
 
 .all_img:hover {
@@ -245,3 +252,21 @@ p{
   padding: 15px;
   font-size: 2rem;
 }
+
+.watchlist_container{
+  position: relative;
+  display: flex;
+}
+
+.delete_button {
+  position: absolute;
+  color: white;
+  border: none;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  background-color: rgb(36, 36, 36);
+  border-radius: 50%;
+  font-size: 0.5rem;
+}
+
